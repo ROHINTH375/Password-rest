@@ -1,8 +1,8 @@
 const crypto = require('crypto');
 const User = require('../models/User');
 const { sendResetEmail } = require('../utils/sendEmail');
-const bcrypt = require('bcrypt');
-
+// const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 // Forgot Password (Step 1)
 exports.forgotPassword = async (req, res) => {
   const { email } = req.body;
